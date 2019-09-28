@@ -39,6 +39,7 @@ public class VWCadFabricante extends javax.swing.JFrame {
         jlaviso = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jtcnpj = new javax.swing.JTextField();
+        jbvoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200205, 200205));
@@ -60,6 +61,14 @@ public class VWCadFabricante extends javax.swing.JFrame {
 
         jLabel3.setText("CNPJ:");
 
+        jbvoltar.setText("<");
+        jbvoltar.setBorder(null);
+        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbvoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,7 +78,9 @@ public class VWCadFabricante extends javax.swing.JFrame {
                 .addComponent(jlaviso, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(86, 86, 86))
             .addGroup(layout.createSequentialGroup()
@@ -90,8 +101,13 @@ public class VWCadFabricante extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -130,6 +146,14 @@ public class VWCadFabricante extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jbtsalvarActionPerformed
+
+    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbvoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,6 +196,7 @@ public class VWCadFabricante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jbtsalvar;
+    private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
     private javax.swing.JTextField jtcnpj;
     private javax.swing.JTextField jtnome;

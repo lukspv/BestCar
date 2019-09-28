@@ -46,6 +46,7 @@ public class VWPesqUsuario extends javax.swing.JFrame {
         jtlogin = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jpsenha = new javax.swing.JTextField();
+        jbvoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
@@ -91,6 +92,14 @@ public class VWPesqUsuario extends javax.swing.JFrame {
 
         jLabel5.setText("Senha:");
 
+        jbvoltar.setText("<");
+        jbvoltar.setBorder(null);
+        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbvoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -114,8 +123,13 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                             .addGap(18, 18, 18)
                             .addComponent(jtnome, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(56, 56, 56)
-                            .addComponent(jLabel1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(56, 56, 56)
+                                    .addComponent(jLabel1))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3)
@@ -140,8 +154,13 @@ public class VWPesqUsuario extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,6 +304,14 @@ public class VWPesqUsuario extends javax.swing.JFrame {
         dispose(); // TODO add your handling code here:
     }//GEN-LAST:event_jbcancelarActionPerformed
 
+    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbvoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -330,6 +357,7 @@ public class VWPesqUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jbcancelar;
     private javax.swing.JButton jbeditar;
     private javax.swing.JButton jbexcluir;
+    private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
     private javax.swing.JTextField jpsenha;
     private javax.swing.JTextField jtcodigo;

@@ -40,6 +40,7 @@ public class VWCadUsuario extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jpsenha = new javax.swing.JPasswordField();
         jlaviso = new javax.swing.JLabel();
+        jbvoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
@@ -63,6 +64,14 @@ public class VWCadUsuario extends javax.swing.JFrame {
 
         jlaviso.setForeground(new java.awt.Color(51, 51, 51));
 
+        jbvoltar.setText("<");
+        jbvoltar.setBorder(null);
+        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbvoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,7 +91,9 @@ public class VWCadUsuario extends javax.swing.JFrame {
                 .addComponent(jbtsalvar)
                 .addGap(45, 45, 45))
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
+                .addContainerGap()
+                .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -90,8 +101,13 @@ public class VWCadUsuario extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -143,6 +159,14 @@ public class VWCadUsuario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jbtsalvarActionPerformed
 
+    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbvoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -184,6 +208,7 @@ public class VWCadUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton jbtsalvar;
+    private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
     private javax.swing.JPasswordField jpsenha;
     private javax.swing.JTextField jtlogin;

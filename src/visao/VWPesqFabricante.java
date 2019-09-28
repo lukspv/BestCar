@@ -42,6 +42,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         jbeditar = new javax.swing.JButton();
         jbexcluir = new javax.swing.JButton();
         jlaviso = new javax.swing.JLabel();
+        jbvoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
@@ -83,6 +84,14 @@ public class VWPesqFabricante extends javax.swing.JFrame {
 
         jlaviso.setForeground(new java.awt.Color(51, 51, 51));
 
+        jbvoltar.setText("<");
+        jbvoltar.setBorder(null);
+        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbvoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,12 +107,17 @@ public class VWPesqFabricante extends javax.swing.JFrame {
                 .addComponent(jbBuscar)
                 .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jbcancelar)
-                .addGap(116, 116, 116)
-                .addComponent(jbeditar)
-                .addGap(18, 18, 18)
-                .addComponent(jbexcluir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jbcancelar)
+                        .addGap(116, 116, 116)
+                        .addComponent(jbeditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbexcluir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -122,7 +136,9 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addContainerGap()
+                .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBuscar)
                     .addComponent(jLabel1))
@@ -258,6 +274,14 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         }// TODO add your handling code here:
     }//GEN-LAST:event_jbexcluirActionPerformed
 
+    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbvoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -301,6 +325,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
     private javax.swing.JButton jbcancelar;
     private javax.swing.JButton jbeditar;
     private javax.swing.JButton jbexcluir;
+    private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
     private javax.swing.JTextField jtcnpj;
     private javax.swing.JTextField jtnome;
