@@ -29,9 +29,9 @@ public class VWInicial extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jbcadastrofabricante = new javax.swing.JButton();
-        jbpesquisafabricante = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jbcadastrarfornecedor = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jbcadastrozona = new javax.swing.JButton();
         jbpesquisazona = new javax.swing.JButton();
@@ -56,37 +56,40 @@ public class VWInicial extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 0));
 
-        jbcadastrofabricante.setText("Cadastro");
-        jbcadastrofabricante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbcadastrofabricanteActionPerformed(evt);
-            }
-        });
-
-        jbpesquisafabricante.setText("Pesquisa");
-        jbpesquisafabricante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbpesquisafabricanteActionPerformed(evt);
-            }
-        });
-
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("FABRICANTE");
+
+        jbcadastrarfornecedor.setText("Cadastro");
+        jbcadastrarfornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadastrarfornecedorActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Pesquisa");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbcadastrofabricante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(32, 32, 32)
                         .addComponent(jLabel3)
-                        .addGap(8, 18, Short.MAX_VALUE))
-                    .addComponent(jbpesquisafabricante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 18, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jbcadastrarfornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -95,9 +98,9 @@ public class VWInicial extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jbcadastrofabricante)
+                .addComponent(jbcadastrarfornecedor)
                 .addGap(18, 18, 18)
-                .addComponent(jbpesquisafabricante)
+                .addComponent(jButton2)
                 .addGap(32, 32, 32))
         );
 
@@ -153,8 +156,18 @@ public class VWInicial extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 0, 0));
 
         jbcadastroacessorio.setText("Cadastro");
+        jbcadastroacessorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadastroacessorioActionPerformed(evt);
+            }
+        });
 
         jbpesquisaracessorio.setText("Pesquisa");
+        jbpesquisaracessorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbpesquisaracessorioActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -313,21 +326,30 @@ public class VWInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbpesquisausuarioActionPerformed
 
-    private void jbcadastrofabricanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastrofabricanteActionPerformed
-        VWCadFabricante fabricante = new VWCadFabricante();
-        fabricante.setVisible(true);
+    private void jbcadastrarfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastrarfornecedorActionPerformed
+        VWCadFornecedor fornecedor = new VWCadFornecedor();
+        fornecedor.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbcadastrarfornecedorActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        VWPesqFornecedor fornecedor = new VWPesqFornecedor();
+        fornecedor.setVisible(true);
+        dispose();// TODO add your handling code here: // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jbcadastroacessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastroacessorioActionPerformed
+        VWCadAcessorio acessorio = new VWCadAcessorio();
+        acessorio.setVisible(true);
+        dispose();// TODO add your handling code here:        // TODO add your handling code here:
+    }//GEN-LAST:event_jbcadastroacessorioActionPerformed
+
+    private void jbpesquisaracessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesquisaracessorioActionPerformed
+        VWPesqAcessorio acessorio = new VWPesqAcessorio();
+        acessorio.setVisible(true);
         dispose();
-
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbcadastrofabricanteActionPerformed
-
-    private void jbpesquisafabricanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesquisafabricanteActionPerformed
-        VWPesqFabricante fabricante = new VWPesqFabricante();
-        fabricante.setVisible(true);
-        dispose();
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbpesquisafabricanteActionPerformed
+    }//GEN-LAST:event_jbpesquisaracessorioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -366,6 +388,7 @@ public class VWInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -376,11 +399,10 @@ public class VWInicial extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton jbcadastrarfornecedor;
     private javax.swing.JButton jbcadastroacessorio;
-    private javax.swing.JButton jbcadastrofabricante;
     private javax.swing.JButton jbcadastrousuario;
     private javax.swing.JButton jbcadastrozona;
-    private javax.swing.JButton jbpesquisafabricante;
     private javax.swing.JButton jbpesquisaracessorio;
     private javax.swing.JButton jbpesquisausuario;
     private javax.swing.JButton jbpesquisazona;
