@@ -100,10 +100,10 @@ public class AcessorioDao {
             
         }
         
-        public Acessorio Buscar(String id) throws SQLException{
+        public Acessorio Buscar(int id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
-        Comando="select * from Acessorio where Aceid =?;";
+        Comando="select * from Acessorio where Aceid ="+id+";";
         //"select * from Zona where Zonome like ?"
         ps=Conecta.prepareStatement(Comando);
         //ps.setString(1,nome+"%"); 
