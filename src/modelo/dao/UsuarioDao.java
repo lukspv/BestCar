@@ -97,7 +97,7 @@ public class UsuarioDao {
     public Usuario Buscar(int id) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
-        Comando = "select * from Usuario where Usid =?;";
+        Comando = "select * from Usuario where Usid =" + id + ";";
         //"select * from Zona where Zonome like ?"
         ps = Conecta.prepareStatement(Comando);
         //ps.setString(1,nome+"%"); 
@@ -107,11 +107,11 @@ public class UsuarioDao {
         //List<Zona> Lista = new ArrayList<>();
         while (rs.next()) {
 
-            ps.setString(1, usuario.getUslogin());
-            ps.setString(2, usuario.getUsnome());
-            ps.setString(3, usuario.getUssenha());
-            ps.setInt(4, usuario.getUsid());
-
+            usuario.setUsid(rs.getInt("Usid"));
+            usuario.setUsnome(rs.getString("Usnome"));
+            usuario.setUslogin(rs.getString("Uslogin"));
+            usuario.setUssenha(rs.getString("Ussenha"));
+            
             //   Lista.add(acessorio);
         }
 
