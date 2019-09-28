@@ -31,7 +31,7 @@ public class VWInicial extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jbcadastrarfornecedor = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jbpesquisarfornecedor = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jbcadastrozona = new javax.swing.JButton();
         jbpesquisazona = new javax.swing.JButton();
@@ -67,10 +67,10 @@ public class VWInicial extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Pesquisa");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jbpesquisarfornecedor.setText("Pesquisa");
+        jbpesquisarfornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jbpesquisarfornecedorActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class VWInicial extends javax.swing.JFrame {
                         .addComponent(jbcadastrarfornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jbpesquisarfornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -100,7 +100,7 @@ public class VWInicial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(jbcadastrarfornecedor)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(jbpesquisarfornecedor)
                 .addGap(32, 32, 32))
         );
 
@@ -332,11 +332,11 @@ public class VWInicial extends javax.swing.JFrame {
         dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jbcadastrarfornecedorActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jbpesquisarfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesquisarfornecedorActionPerformed
         VWPesqFornecedor fornecedor = new VWPesqFornecedor();
         fornecedor.setVisible(true);
         dispose();// TODO add your handling code here: // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jbpesquisarfornecedorActionPerformed
 
     private void jbcadastroacessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastroacessorioActionPerformed
         VWCadAcessorio acessorio = new VWCadAcessorio();
@@ -388,7 +388,6 @@ public class VWInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -404,6 +403,7 @@ public class VWInicial extends javax.swing.JFrame {
     private javax.swing.JButton jbcadastrousuario;
     private javax.swing.JButton jbcadastrozona;
     private javax.swing.JButton jbpesquisaracessorio;
+    private javax.swing.JButton jbpesquisarfornecedor;
     private javax.swing.JButton jbpesquisausuario;
     private javax.swing.JButton jbpesquisazona;
     // End of variables declaration//GEN-END:variables
