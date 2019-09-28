@@ -17,7 +17,7 @@ import modelo.entidade.Fabricante;
 public class VWPesqFornecedor extends javax.swing.JFrame {
 
     /**
-     * Creates new form VWPesqFabricante
+     * Creates new form PesqFornecedor
      */
     public VWPesqFornecedor() {
         initComponents();
@@ -32,25 +32,31 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jbvoltar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jtcnpj = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jbBuscar = new javax.swing.JButton();
         jtnome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jlaviso = new javax.swing.JLabel();
         jbcancelar = new javax.swing.JButton();
         jbeditar = new javax.swing.JButton();
         jbexcluir = new javax.swing.JButton();
-        jlaviso = new javax.swing.JLabel();
-        jbvoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
 
+        jbvoltar.setText("<");
+        jbvoltar.setBorder(null);
+        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbvoltarActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Pesquisa de Fornecedor");
-
-        jLabel1.setText("CNPJ:");
 
         jbBuscar.setText("Buscar");
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -60,6 +66,10 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
         });
 
         jLabel2.setText("Nome:");
+
+        jLabel1.setText("CNPJ:");
+
+        jlaviso.setForeground(new java.awt.Color(51, 51, 51));
 
         jbcancelar.setText("Cancelar");
         jbcancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -82,23 +92,13 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
             }
         });
 
-        jlaviso.setForeground(new java.awt.Color(51, 51, 51));
-
-        jbvoltar.setText("<");
-        jbvoltar.setBorder(null);
-        jbvoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbvoltarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+                .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,11 +154,19 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
                     .addComponent(jbcancelar)
                     .addComponent(jbeditar)
                     .addComponent(jbexcluir))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbvoltarActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
         jlaviso.setText("");
@@ -206,7 +214,7 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
         FabricanteDao fdao = new FabricanteDao();
         fabricante.setFacnpj(jtcnpj.getText());
         fabricante.setFanome(jtnome.getText());
-        
+
         try {
             fdao.Alterar(fabricante);
             System.out.println("*Fabricante Alterado");
@@ -267,14 +275,6 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
             jlaviso.setText("*Erro ao Exluir " + ex.getMessage());
         }// TODO add your handling code here:
     }//GEN-LAST:event_jbexcluirActionPerformed
-
-    private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed
-        VWInicial inicial = new VWInicial();
-        inicial.setVisible(true);
-        dispose();
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbvoltarActionPerformed
 
     /**
      * @param args the command line arguments

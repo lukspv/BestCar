@@ -329,19 +329,22 @@ public class VWInicial extends javax.swing.JFrame {
     private void jbcadastrarfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastrarfornecedorActionPerformed
         VWCadFornecedor fornecedor = new VWCadFornecedor();
         fornecedor.setVisible(true);
-        dispose();// TODO add your handling code here:
+        dispose();
+// TODO add your handling code here:
     }//GEN-LAST:event_jbcadastrarfornecedorActionPerformed
 
     private void jbpesquisarfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesquisarfornecedorActionPerformed
         VWPesqFornecedor fornecedor = new VWPesqFornecedor();
         fornecedor.setVisible(true);
-        dispose();// TODO add your handling code here: // TODO add your handling code here:
+        dispose();
+// TODO add your handling code here: // TODO add your handling code here:
     }//GEN-LAST:event_jbpesquisarfornecedorActionPerformed
 
     private void jbcadastroacessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadastroacessorioActionPerformed
         VWCadAcessorio acessorio = new VWCadAcessorio();
         acessorio.setVisible(true);
-        dispose();// TODO add your handling code here:        // TODO add your handling code here:
+        dispose();
+// TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_jbcadastroacessorioActionPerformed
 
     private void jbpesquisaracessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesquisaracessorioActionPerformed
