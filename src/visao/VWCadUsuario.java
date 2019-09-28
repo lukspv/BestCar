@@ -42,6 +42,7 @@ public class VWCadUsuario extends javax.swing.JFrame {
         jlaviso = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(200, 205));
 
         jbtsalvar.setText("Salvar");
         jbtsalvar.setToolTipText("Clique para Salvar");

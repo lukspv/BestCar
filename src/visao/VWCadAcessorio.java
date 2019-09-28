@@ -39,6 +39,7 @@ public class VWCadAcessorio extends javax.swing.JFrame {
         jlaviso = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(200, 205));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Cadastro de Acessorio");

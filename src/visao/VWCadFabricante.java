@@ -14,12 +14,12 @@ import modelo.entidade.Fabricante;
  *
  * @author lucas
  */
-public class VWCadFrabricante extends javax.swing.JFrame {
+public class VWCadFabricante extends javax.swing.JFrame {
 
     /**
      * Creates new form VWCadFrabricante
      */
-    public VWCadFrabricante() {
+    public VWCadFabricante() {
         initComponents();
     }
 
@@ -41,6 +41,7 @@ public class VWCadFrabricante extends javax.swing.JFrame {
         jtcnpj = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(200205, 200205));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel2.setText("Cadastro de Fabricante");
@@ -147,20 +148,21 @@ public class VWCadFrabricante extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VWCadFrabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VWCadFabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VWCadFrabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VWCadFabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VWCadFrabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VWCadFabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VWCadFrabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VWCadFabricante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VWCadFrabricante().setVisible(true);
+                new VWCadFabricante().setVisible(true);
             }
         });
     }

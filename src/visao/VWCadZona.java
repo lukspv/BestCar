@@ -39,6 +39,7 @@ public class VWCadZona extends javax.swing.JFrame {
         jtnome = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(200, 205));
 
         jLabel1.setText("Nome:");
 

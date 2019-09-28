@@ -44,6 +44,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         jlaviso = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(200, 205));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setText("Pesquisa de Usuario");
