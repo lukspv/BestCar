@@ -109,9 +109,9 @@ public class VWCadZona extends javax.swing.JFrame {
             
 // TODO add your handling code here:
         } catch (SQLException ex) {
-            System.out.println("Erro ao salvar" +ex.getMessage());
+            System.out.println("Erro ao salvar " +ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar a Zona"+ ex.getMessage());
+            jlaviso.setText("Erro ao Salvar a Zona "+ ex.getMessage());
         }
         
         

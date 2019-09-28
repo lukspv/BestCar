@@ -135,9 +135,9 @@ public class VWCadUsuario extends javax.swing.JFrame {
 
             // TODO add your handling code here:
         } catch (SQLException ex) {
-            System.out.println("Erro ao salvar" +ex.getMessage());
+            System.out.println("Erro ao salvar " +ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar o Usuario"+ ex.getMessage());
+            jlaviso.setText("Erro ao Salvar o Usuario "+ ex.getMessage());
         }
 
     }//GEN-LAST:event_jbtsalvarActionPerformed

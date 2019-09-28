@@ -90,8 +90,6 @@ public class VWPesqUsuario extends javax.swing.JFrame {
 
         jLabel5.setText("Senha:");
 
-        jpsenha.setEnabled(false);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +102,7 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addGap(18, 18, 18)
                             .addComponent(jtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addComponent(jLabel5)
                             .addGap(18, 18, 18)
                             .addComponent(jpsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -148,18 +146,18 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                     .addComponent(jtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBuscar)
                     .addComponent(jLabel1))
-                .addGap(33, 33, 33)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtnome, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jtnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jpsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(jpsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(jlaviso, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -197,14 +195,14 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                     //jtCodigo.setText(zona.getZoid());
                     jtnome.setText(usuario.getUsnome());
                     jtlogin.setText(usuario.getUslogin());
-                    jtlogin.setText(usuario.getUssenha());
+                    jpsenha.setText(usuario.getUssenha());
 
                 }
 
             } catch (SQLException ex) {
-                System.out.println("*Erro ao Buscar" + ex.getMessage());
+                System.out.println("*Erro ao Buscar " + ex.getMessage());
                 jlaviso.setForeground(Color.red);
-                jlaviso.setText("*Erro ao Buscar" + ex.getMessage());
+                jlaviso.setText("*Erro ao Buscar " + ex.getMessage());
             }
 
         }
@@ -227,12 +225,12 @@ public class VWPesqUsuario extends javax.swing.JFrame {
             jlaviso.setText("*Usuario Excluido");
             jtnome.setText("");
             jtlogin.setText("");
-            jtlogin.setText("");
+            jpsenha.setText("");
 
         } catch (SQLException ex) {
-            System.out.println("*Erro ao Excluir" + ex.getMessage());
+            System.out.println("*Erro ao Excluir " + ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("*Erro ao Exluir" + ex.getMessage());
+            jlaviso.setText("*Erro ao Exluir " + ex.getMessage());
         }// TODO add your handling code here:
     }//GEN-LAST:event_jbexcluirActionPerformed
 
@@ -253,12 +251,12 @@ public class VWPesqUsuario extends javax.swing.JFrame {
             jlaviso.setText("*Usuario Alterado");
             jtnome.setText("");
             jtlogin.setText("");
-            jtlogin.setText("");
+            jpsenha.setText("");
 
         } catch (SQLException ex) {
-            System.out.println("*Erro ao Alterar" + ex.getMessage());
+            System.out.println("*Erro ao Alterar " + ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("*Erro ao Alterar" + ex.getMessage());
+            jlaviso.setText("*Erro ao Alterar " + ex.getMessage());
         }
 
         /*try {
