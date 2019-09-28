@@ -31,10 +31,11 @@ public class FabricanteDao {
     public void Cadastrar(Fabricante fabricante) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
-        Comando="insert into Fabricante (Fanome) values (?);";
+        Comando="insert into Fabricante (Facnpj,Fanome) values (?,?);";
         ps=Conecta.prepareStatement(Comando);
        
-        ps.setString(1, fabricante.getFanome());
+        ps.setString(1, fabricante.getFacnpj());
+        ps.setString(2, fabricante.getFanome());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -101,7 +102,7 @@ public class FabricanteDao {
         public Fabricante Buscar(String id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
-        Comando="select * from Fabricante where Facnpj =?;";
+        Comando="select * from Fabricante where Facnpj ="+id+";";
         //"select * from Zona where Zonome like ?"
         ps=Conecta.prepareStatement(Comando);
         //ps.setString(1,nome+"%"); 
@@ -114,6 +115,8 @@ public class FabricanteDao {
             
             fabricante.setFacnpj(rs.getString("Facnpj"));
             fabricante.setFanome(rs.getString("Fanome"));
+            
+
             
          //   Lista.add(fabricante);
             
