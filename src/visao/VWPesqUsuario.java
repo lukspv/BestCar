@@ -226,6 +226,7 @@ public class VWPesqUsuario extends javax.swing.JFrame {
             jtnome.setText("");
             jtlogin.setText("");
             jpsenha.setText("");
+            jtcodigo.setText("");
 
         } catch (SQLException ex) {
             System.out.println("*Erro ao Excluir " + ex.getMessage());
@@ -252,6 +253,7 @@ public class VWPesqUsuario extends javax.swing.JFrame {
             jtnome.setText("");
             jtlogin.setText("");
             jpsenha.setText("");
+            jtcodigo.setText("");
 
         } catch (SQLException ex) {
             System.out.println("*Erro ao Alterar " + ex.getMessage());
