@@ -173,7 +173,7 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
                 }
 
             } catch (SQLException ex) {
-                System.out.println("*Erro ao Buscar" + ex.getMessage());
+                System.out.println("*Erro ao Buscar " + ex.getMessage());
                 jlaviso.setForeground(Color.red);
                 jlaviso.setText("*Erro ao Buscar" + ex.getMessage());
             }

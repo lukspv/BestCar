@@ -173,9 +173,9 @@ public class VWPesqZona extends javax.swing.JFrame {
                 }
 
             } catch (SQLException ex) {
-                System.out.println("*Erro ao Buscar" + ex.getMessage());
+                System.out.println("*Erro ao Buscar " + ex.getMessage());
                 jlaviso.setForeground(Color.red);
-                jlaviso.setText("*Erro ao Buscar" + ex.getMessage());
+                jlaviso.setText("*Erro ao Buscar " + ex.getMessage());
             }
 
         }
@@ -204,9 +204,9 @@ public class VWPesqZona extends javax.swing.JFrame {
             jtnome.setText("");
 
         } catch (SQLException ex) {
-            System.out.println("*Erro ao Alterar" + ex.getMessage());
+            System.out.println("*Erro ao Alterar " + ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("*Erro ao Alterar" + ex.getMessage());
+            jlaviso.setText("*Erro ao Alterar " + ex.getMessage());
         }
 
         /*try {
@@ -246,9 +246,9 @@ public class VWPesqZona extends javax.swing.JFrame {
             jtnome.setText("");
 
         } catch (SQLException ex) {
-            System.out.println("*Erro ao Excluir" + ex.getMessage());
+            System.out.println("*Erro ao Excluir " + ex.getMessage());
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("*Erro ao Exluir" + ex.getMessage());
+            jlaviso.setText("*Erro ao Exluir " + ex.getMessage());
         }// TODO add your handling code here:
     }//GEN-LAST:event_jbexcluirActionPerformed
 
