@@ -27,21 +27,217 @@ public class VWInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        jbpesqacessorio = new javax.swing.JButton();
+        jbcadacessorio = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jbpesqfornecedor = new javax.swing.JButton();
+        jbcadfornecedor = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jbpesqusuario = new javax.swing.JButton();
+        jbcadusuario = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jbcadzona = new javax.swing.JButton();
+        jbpesqzona = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+
+        setTitle("Tela Inicial");
+        setLocation(new java.awt.Point(200, 205));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("BestCar");
+
+        jbpesqacessorio.setText("Pesquisar");
+        jbpesqacessorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbpesqacessorioActionPerformed(evt);
+            }
+        });
+
+        jbcadacessorio.setText("Cadastro");
+        jbcadacessorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadacessorioActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("ACESSORIO");
+
+        jbpesqfornecedor.setText("Pesquisar");
+        jbpesqfornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbpesqfornecedorActionPerformed(evt);
+            }
+        });
+
+        jbcadfornecedor.setText("Cadastro");
+        jbcadfornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadfornecedorActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("FORNECEDOR");
+
+        jbpesqusuario.setText("Pesquisar");
+        jbpesqusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbpesqusuarioActionPerformed(evt);
+            }
+        });
+
+        jbcadusuario.setText("Cadastro");
+        jbcadusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadusuarioActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("USUARIO");
+
+        jbcadzona.setText("Cadastro");
+        jbcadzona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbcadzonaActionPerformed(evt);
+            }
+        });
+
+        jbpesqzona.setText("Pesquisar");
+        jbpesqzona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbpesqzonaActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("ZONA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbcadacessorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbpesqacessorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(85, 85, 85)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jbcadfornecedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbpesqfornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel4)
+                        .addGap(86, 86, 86))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jbcadusuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbpesqusuario, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
+                        .addGap(78, 78, 78)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel5))
+                    .addComponent(jbcadzona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbpesqzona, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE))
+                .addGap(103, 103, 103))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(342, 342, 342)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbcadacessorio)
+                    .addComponent(jbcadfornecedor)
+                    .addComponent(jbcadusuario)
+                    .addComponent(jbcadzona))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbpesqacessorio)
+                    .addComponent(jbpesqfornecedor)
+                    .addComponent(jbpesqusuario)
+                    .addComponent(jbpesqzona))
+                .addGap(64, 64, 64))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbcadacessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadacessorioActionPerformed
+        VWCadAcessorio tela = new VWCadAcessorio();
+        tela.setVisible(true);
+        dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jbcadacessorioActionPerformed
+
+    private void jbpesqacessorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesqacessorioActionPerformed
+        VWPesqAcessorio tela = new VWPesqAcessorio();
+        tela.setVisible(true);
+        dispose(); // TODO add your handling code here:
+    }//GEN-LAST:event_jbpesqacessorioActionPerformed
+
+    private void jbcadfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadfornecedorActionPerformed
+        VWCadFornecedor tela = new VWCadFornecedor();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbcadfornecedorActionPerformed
+
+    private void jbpesqfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesqfornecedorActionPerformed
+        VWPesqFornecedor tela = new VWPesqFornecedor();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbpesqfornecedorActionPerformed
+
+    private void jbcadusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadusuarioActionPerformed
+        VWCadUsuario tela = new VWCadUsuario();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbcadusuarioActionPerformed
+
+    private void jbpesqusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesqusuarioActionPerformed
+        VWPesqUsuario tela = new VWPesqUsuario();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbpesqusuarioActionPerformed
+
+    private void jbcadzonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadzonaActionPerformed
+        VWCadZona tela = new VWCadZona();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbcadzonaActionPerformed
+
+    private void jbpesqzonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesqzonaActionPerformed
+        VWPesqZona tela = new VWPesqZona();
+        tela.setVisible(true);
+        dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_jbpesqzonaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +275,19 @@ public class VWInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton jbcadacessorio;
+    private javax.swing.JButton jbcadfornecedor;
+    private javax.swing.JButton jbcadusuario;
+    private javax.swing.JButton jbcadzona;
+    private javax.swing.JButton jbpesqacessorio;
+    private javax.swing.JButton jbpesqfornecedor;
+    private javax.swing.JButton jbpesqusuario;
+    private javax.swing.JButton jbpesqzona;
     // End of variables declaration//GEN-END:variables
 }
