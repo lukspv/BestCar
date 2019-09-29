@@ -80,7 +80,7 @@ public class VWInicial extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("FORNECEDOR");
+        jLabel3.setText("FABRICANTE");
 
         jbpesqusuario.setText("Pesquisar");
         jbpesqusuario.addActionListener(new java.awt.event.ActionListener() {

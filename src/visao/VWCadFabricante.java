@@ -45,7 +45,7 @@ public class VWCadFabricante extends javax.swing.JFrame {
         setLocation(new java.awt.Point(200, 205));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel2.setText("Cadastro de Fornecedor");
+        jLabel2.setText("Cadastro de Fabricante");
 
         jbvoltar.setText("<");
         jbvoltar.setBorder(null);

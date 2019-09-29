@@ -56,7 +56,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel3.setText("Pesquisa de Fornecedor");
+        jLabel3.setText("Pesquisa de Fabricante");
 
         jbBuscar.setText("Buscar");
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +118,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
                         .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(jLabel3)
-                        .addGap(0, 81, Short.MAX_VALUE))
+                        .addGap(0, 88, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jbcancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
