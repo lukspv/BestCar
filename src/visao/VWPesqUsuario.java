@@ -146,7 +146,9 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                                 .addComponent(jbeditar)
                                 .addGap(18, 18, 18)
                                 .addComponent(jbexcluir))
-                            .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jlaviso, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -207,6 +209,10 @@ public class VWPesqUsuario extends javax.swing.JFrame {
                     System.out.println("*Usuario não cadastrado");
                     jlaviso.setForeground(Color.red);
                     jlaviso.setText("*Usuario não Cadastrado");
+                    jtcodigo.setText("");
+                    jtlogin.setText("");
+                    jpsenha.setText("");
+                    jtnome.setText("");
                 } else {
                     //jtCodigo.setText(zona.getZoid());
                     jtnome.setText(usuario.getUsnome());

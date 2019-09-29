@@ -121,14 +121,14 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
                         .addGap(0, 90, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jbcancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jbeditar)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbexcluir)))))
+                        .addComponent(jbcancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbeditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbexcluir))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jlaviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -180,6 +180,8 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
                     System.out.println("*Acessorio não cadastrado");
                     jlaviso.setForeground(Color.red);
                     jlaviso.setText("*Acessorio não Cadastrado");
+                    jtcodigo.setText("");
+                    jtnome.setText("");
                 } else {
                     //jtCodigo.setText(zona.getZoid());
                     jtnome.setText(acessorio.getAcedesc());

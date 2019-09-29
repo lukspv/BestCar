@@ -132,7 +132,7 @@ public class VWCadUsuario extends javax.swing.JFrame {
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
 
-        if (jtlogin.equals("") || jtnome.equals("") || jpsenha.equals("")) {
+        if (jtlogin.getText().equals("") || jtnome.getText().equals("") || jpsenha.getText().equals("")) {
             jlaviso.setForeground(Color.red);
             jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
 

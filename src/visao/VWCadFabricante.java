@@ -133,7 +133,7 @@ public class VWCadFabricante extends javax.swing.JFrame {
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
 
-        if (jtcnpj.equals("") || jtnome.equals("")) {
+        if (jtcnpj.getText().equals("") || jtnome.getText().equals("")) {
             jlaviso.setForeground(Color.red);
             jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
 

@@ -113,7 +113,7 @@ public class VWCadAcessorio extends javax.swing.JFrame {
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
 
-        if (jtnome.equals("")) {
+        if (jtnome.getText().equals("")) {
             jlaviso.setForeground(Color.red);
             jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
 
