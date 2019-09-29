@@ -297,6 +297,8 @@ public class VWPesqUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_jbeditarActionPerformed
 
     private void jbcancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcancelarActionPerformed
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
         dispose(); // TODO add your handling code here:
     }//GEN-LAST:event_jbcancelarActionPerformed
 

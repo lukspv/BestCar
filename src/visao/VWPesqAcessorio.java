@@ -176,7 +176,7 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
             id = (Integer.parseInt(jtcodigo.getText()));
             try {
                 Acessorio acessorio = adao.Buscar(id);
-                if (acessorio.getAceid()!= id || jtcodigo.getText() == null) {
+                if (acessorio.getAceid() != id || jtcodigo.getText() == null) {
                     System.out.println("*Acessorio não cadastrado");
                     jlaviso.setForeground(Color.red);
                     jlaviso.setText("*Acessorio não Cadastrado");
@@ -197,7 +197,9 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBuscarActionPerformed
 
     private void jbcancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcancelarActionPerformed
-        dispose(); // TODO add your handling code here:
+        VWInicial inicial = new VWInicial();
+        inicial.setVisible(true);
+        dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jbcancelarActionPerformed
 
     private void jbeditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbeditarActionPerformed
@@ -259,7 +261,7 @@ public class VWPesqAcessorio extends javax.swing.JFrame {
             jtnome.setText("");
 
         } catch (SQLException ex) {
-            System.out.println("*Erro ao Excluir"  + ex.getMessage());
+            System.out.println("*Erro ao Excluir" + ex.getMessage());
             jlaviso.setForeground(Color.red);
             jlaviso.setText("*Erro ao Exluir " + ex.getMessage());
         }// TODO add your handling code here:
