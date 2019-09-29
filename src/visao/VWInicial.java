@@ -46,7 +46,7 @@ public class VWInicial extends javax.swing.JFrame {
         setLocation(new java.awt.Point(200, 205));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("BestCar");
+        jLabel1.setText("Best Car");
 
         jbpesqacessorio.setText("Pesquisar");
         jbpesqacessorio.addActionListener(new java.awt.event.ActionListener() {
