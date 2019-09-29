@@ -204,13 +204,13 @@ public class VWInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jbpesqacessorioActionPerformed
 
     private void jbcadfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbcadfornecedorActionPerformed
-        VWCadFornecedor tela = new VWCadFornecedor();
+        VWCadFabricante tela = new VWCadFabricante();
         tela.setVisible(true);
         dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jbcadfornecedorActionPerformed
 
     private void jbpesqfornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpesqfornecedorActionPerformed
-        VWPesqFornecedor tela = new VWPesqFornecedor();
+        VWPesqFabricante tela = new VWPesqFabricante();
         tela.setVisible(true);
         dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jbpesqfornecedorActionPerformed
