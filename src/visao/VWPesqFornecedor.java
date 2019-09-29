@@ -34,7 +34,6 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
 
         jbvoltar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jtcnpj = new javax.swing.JTextField();
         jbBuscar = new javax.swing.JButton();
         jtnome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -43,6 +42,7 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
         jbcancelar = new javax.swing.JButton();
         jbeditar = new javax.swing.JButton();
         jbexcluir = new javax.swing.JButton();
+        jtcnpj = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
@@ -92,6 +92,8 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
             }
         });
 
+        jtcnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("################"))));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,9 +104,9 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jtcnpj)
-                    .addComponent(jtnome, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jtnome, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(jtcnpj))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbBuscar)
                 .addGap(43, 43, 43))
@@ -134,9 +136,9 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtcnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBuscar)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jtcnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -318,7 +320,7 @@ public class VWPesqFornecedor extends javax.swing.JFrame {
     private javax.swing.JButton jbexcluir;
     private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
-    private javax.swing.JTextField jtcnpj;
+    private javax.swing.JFormattedTextField jtcnpj;
     private javax.swing.JTextField jtnome;
     // End of variables declaration//GEN-END:variables
 }
