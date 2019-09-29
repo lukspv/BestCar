@@ -42,7 +42,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
         jbcancelar = new javax.swing.JButton();
         jbeditar = new javax.swing.JButton();
         jbexcluir = new javax.swing.JButton();
-        jtcnpj = new javax.swing.JFormattedTextField();
+        jtcnpj = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(200, 205));
@@ -91,8 +91,6 @@ public class VWPesqFabricante extends javax.swing.JFrame {
                 jbexcluirActionPerformed(evt);
             }
         });
-
-        jtcnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("################"))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -180,10 +178,11 @@ public class VWPesqFabricante extends javax.swing.JFrame {
             id = jtcnpj.getText();
             try {
                 Fabricante fabricante = fdao.Buscar(id);
-                if (!fabricante.getFacnpj().equals(id) || jtcnpj.getText() == null) {
+                if (fabricante.getFacnpj() == null) {
                     System.out.println("*Fabricante não cadastrado");
                     jlaviso.setForeground(Color.red);
                     jlaviso.setText("*Fabricante não Cadastrado");
+                    jtcnpj.setText("");
                 } else {
                     //jtCodigo.setText(zona.getZoid());
                     jtnome.setText(fabricante.getFanome());
@@ -259,9 +258,9 @@ public class VWPesqFabricante extends javax.swing.JFrame {
 
         try {
             fdao.Excluir(id);
-            System.out.println("*Usuario Excluido");
+            System.out.println("*Fabricante Excluido");
             jlaviso.setForeground(Color.green.darker());
-            jlaviso.setText("*Usuario Excluido");
+            jlaviso.setText("*Fabricante Excluido");
             jtnome.setText("");
             jtcnpj.setText("");
             //jtlogin.setText("");
@@ -322,7 +321,7 @@ public class VWPesqFabricante extends javax.swing.JFrame {
     private javax.swing.JButton jbexcluir;
     private javax.swing.JButton jbvoltar;
     private javax.swing.JLabel jlaviso;
-    private javax.swing.JFormattedTextField jtcnpj;
+    private javax.swing.JTextField jtcnpj;
     private javax.swing.JTextField jtnome;
     // End of variables declaration//GEN-END:variables
 }
