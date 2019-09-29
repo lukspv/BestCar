@@ -102,7 +102,7 @@ public class FabricanteDao {
         public Fabricante Buscar(String id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
-        Comando="select * from Fabricante where Facnpj ="+id+";";
+        Comando="select * from Fabricante where Facnpj = "+id+";";
         //"select * from Zona where Zonome like ?"
         ps=Conecta.prepareStatement(Comando);
         //ps.setString(1,nome+"%"); 
