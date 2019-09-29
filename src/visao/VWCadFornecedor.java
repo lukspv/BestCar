@@ -135,24 +135,34 @@ public class VWCadFornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_jbvoltarActionPerformed
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
-        Fabricante fabricante = new Fabricante();
-        FabricanteDao fdao = new FabricanteDao();
-        fabricante.setFacnpj(jtcnpj.getText());
-        fabricante.setFanome(jtnome.getText());
 
-        try {
-            fdao.Cadastrar(fabricante);
-            jtnome.setText("");
-            jtcnpj.setText("");
-            jlaviso.setForeground(Color.green.darker());
-            jlaviso.setText("*Fabrica Salva com Sucesso");
-
-            // TODO add your handling code here:
-        } catch (SQLException ex) {
-            System.out.println("Erro ao salvar " +ex.getMessage());
+        if (jtcnpj.equals("") || jtnome.equals("")) {
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar o Fabricante "+ ex.getMessage());
+            jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
+
+        } else {
+
+            Fabricante fabricante = new Fabricante();
+            FabricanteDao fdao = new FabricanteDao();
+            fabricante.setFacnpj(jtcnpj.getText());
+            fabricante.setFanome(jtnome.getText());
+
+            try {
+                fdao.Cadastrar(fabricante);
+                jtnome.setText("");
+                jtcnpj.setText("");
+                jlaviso.setForeground(Color.green.darker());
+                jlaviso.setText("*Fabrica Salva com Sucesso");
+
+                // TODO add your handling code here:
+            } catch (SQLException ex) {
+                System.out.println("Erro ao salvar " + ex.getMessage());
+                jlaviso.setForeground(Color.red);
+                jlaviso.setText("Erro ao Salvar o Fabricante " + ex.getMessage());
+            }
+
         }
+
 
     }//GEN-LAST:event_jbtsalvarActionPerformed
 

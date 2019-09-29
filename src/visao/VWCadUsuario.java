@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.sql.SQLException;
 import modelo.dao.UsuarioDao;
 import modelo.entidade.Usuario;
+
 public class VWCadUsuario extends javax.swing.JFrame {
 
     /**
@@ -130,31 +131,38 @@ public class VWCadUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
-        //Zona zona = new Zona();
-        //ZonaDao zdao = new ZonaDao();
-        //zona.setZonome(jtlogin.getText());
-        Usuario usuario = new Usuario();
-        UsuarioDao udao = new UsuarioDao();
-        
-        usuario.setUsnome(jtnome.getText());
-        usuario.setUslogin(jtlogin.getText());
-        usuario.setUssenha(jpsenha.getText());
-        
-        
 
-        try {
-            udao.Cadastrar(usuario);
-            jtnome.setText("");
-            jtlogin.setText("");      
-            jpsenha.setText("");
-            jlaviso.setForeground(Color.green.darker());
-            jlaviso.setText("*Usuario Salvo com Sucesso");
-
-            // TODO add your handling code here:
-        } catch (SQLException ex) {
-            System.out.println("Erro ao salvar " +ex.getMessage());
+        if (jtlogin.equals("") || jtnome.equals("") || jpsenha.equals("")) {
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar o Usuario "+ ex.getMessage());
+            jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
+
+        } else {
+
+//Zona zona = new Zona();
+            //ZonaDao zdao = new ZonaDao();
+            //zona.setZonome(jtlogin.getText());
+            Usuario usuario = new Usuario();
+            UsuarioDao udao = new UsuarioDao();
+
+            usuario.setUsnome(jtnome.getText());
+            usuario.setUslogin(jtlogin.getText());
+            usuario.setUssenha(jpsenha.getText());
+
+            try {
+                udao.Cadastrar(usuario);
+                jtnome.setText("");
+                jtlogin.setText("");
+                jpsenha.setText("");
+                jlaviso.setForeground(Color.green.darker());
+                jlaviso.setText("*Usuario Salvo com Sucesso");
+
+                // TODO add your handling code here:
+            } catch (SQLException ex) {
+                System.out.println("Erro ao salvar " + ex.getMessage());
+                jlaviso.setForeground(Color.red);
+                jlaviso.setText("Erro ao Salvar o Usuario " + ex.getMessage());
+            }
+
         }
 
     }//GEN-LAST:event_jbtsalvarActionPerformed

@@ -115,28 +115,32 @@ public class VWCadZona extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
-        Zona zona = new Zona();
-        ZonaDao zdao = new ZonaDao();
-        zona.setZonome(jtnome.getText());
-        
-        try {
-            zdao.Cadastrar(zona);
-            jtnome.setText("");
-            jlaviso.setForeground(Color.green.darker());
-            jlaviso.setText("*Zona Salva com Sucesso");
-            
-            
-            
-            
-// TODO add your handling code here:
-        } catch (SQLException ex) {
-            System.out.println("Erro ao salvar " +ex.getMessage());
+
+        if (jtnome.equals("")) {
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar a Zona "+ ex.getMessage());
+            jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
+
+        } else {
+
+            Zona zona = new Zona();
+            ZonaDao zdao = new ZonaDao();
+            zona.setZonome(jtnome.getText());
+
+            try {
+                zdao.Cadastrar(zona);
+                jtnome.setText("");
+                jlaviso.setForeground(Color.green.darker());
+                jlaviso.setText("*Zona Salva com Sucesso");
+
+// TODO add your handling code here:
+            } catch (SQLException ex) {
+                System.out.println("Erro ao salvar " + ex.getMessage());
+                jlaviso.setForeground(Color.red);
+                jlaviso.setText("Erro ao Salvar a Zona " + ex.getMessage());
+            }
+
         }
-        
-        
-        
+
     }//GEN-LAST:event_jbtsalvarActionPerformed
 
     private void jbvoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbvoltarActionPerformed

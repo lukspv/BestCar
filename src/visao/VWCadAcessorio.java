@@ -112,21 +112,30 @@ public class VWCadAcessorio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtsalvarActionPerformed
-        Acessorio acessorio = new Acessorio();
-        AcessorioDao adao = new AcessorioDao();
-        acessorio.setAcedesc(jtnome.getText());
 
-        try {
-            adao.Cadastrar(acessorio);
-            jtnome.setText("");
-            jlaviso.setForeground(Color.green.darker());
-            jlaviso.setText("*Acessorio Salvo com Sucesso");
-
-            // TODO add your handling code here:
-        } catch (SQLException ex) {
-            System.out.println("Erro ao salvar " +ex.getMessage());
+        if (jtnome.equals("")) {
             jlaviso.setForeground(Color.red);
-            jlaviso.setText("Erro ao Salvar o Acessorio "+ ex.getMessage());
+            jlaviso.setText("*Por favor preencer todos os campos obrigatorios");
+
+        } else {
+
+            Acessorio acessorio = new Acessorio();
+            AcessorioDao adao = new AcessorioDao();
+            acessorio.setAcedesc(jtnome.getText());
+
+            try {
+                adao.Cadastrar(acessorio);
+                jtnome.setText("");
+                jlaviso.setForeground(Color.green.darker());
+                jlaviso.setText("*Acessorio Salvo com Sucesso");
+
+                // TODO add your handling code here:
+            } catch (SQLException ex) {
+                System.out.println("Erro ao salvar " + ex.getMessage());
+                jlaviso.setForeground(Color.red);
+                jlaviso.setText("Erro ao Salvar o Acessorio " + ex.getMessage());
+            }
+
         }
 
     }//GEN-LAST:event_jbtsalvarActionPerformed
@@ -135,7 +144,6 @@ public class VWCadAcessorio extends javax.swing.JFrame {
         VWInicial inicial = new VWInicial();
         inicial.setVisible(true);
         dispose();
-
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jbvoltarActionPerformed
