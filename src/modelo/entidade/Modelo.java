@@ -10,36 +10,36 @@ package modelo.entidade;
  * @author lucas
  */
 public class Modelo {
-    private int Moid;
-    private String Modesc;
+    private int moid;
+    private String modesc;
     private Fabricante fabricante;
 
     /**
-     * @return the Moid
+     * @return the moid
      */
-    public int getMoid() {
-        return Moid;
+    public int getmoid() {
+        return moid;
     }
 
     /**
-     * @param Moid the Moid to set
+     * @param moid the moid to set
      */
-    public void setMoid(int Moid) {
-        this.Moid = Moid;
+    public void setmoid(int moid) {
+        this.moid = moid;
     }
 
     /**
-     * @return the Modesc
+     * @return the modesc
      */
-    public String getModesc() {
-        return Modesc;
+    public String getmodesc() {
+        return modesc;
     }
 
     /**
-     * @param Modesc the Modesc to set
+     * @param modesc the modesc to set
      */
-    public void setModesc(String Modesc) {
-        this.Modesc = Modesc;
+    public void setmodesc(String modesc) {
+        this.modesc = modesc;
     }
 
     /**

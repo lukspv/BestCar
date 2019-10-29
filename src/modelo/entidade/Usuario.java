@@ -10,65 +10,65 @@ package modelo.entidade;
  * @author lucas
  */
 public class Usuario {
-    private int Usid;
-    private String Usnome;
-    private String Uslogin;
-    private String Ussenha;
+    private int usid;
+    private String usnome;
+    private String uslogin;
+    private String ussenha;
 
     /**
-     * @return the Usid
+     * @return the usid
      */
-    public int getUsid() {
-        return Usid;
+    public int getusid() {
+        return usid;
     }
 
     /**
-     * @param Usid the Usid to set
+     * @param usid the usid to set
      */
-    public void setUsid(int Usid) {
-        this.Usid = Usid;
+    public void setusid(int usid) {
+        this.usid = usid;
     }
 
     /**
-     * @return the Usnome
+     * @return the usnome
      */
-    public String getUsnome() {
-        return Usnome;
+    public String getusnome() {
+        return usnome;
     }
 
     /**
-     * @param Usnome the Usnome to set
+     * @param usnome the usnome to set
      */
-    public void setUsnome(String Usnome) {
-        this.Usnome = Usnome;
+    public void setusnome(String usnome) {
+        this.usnome = usnome;
     }
 
     /**
-     * @return the Uslogin
+     * @return the uslogin
      */
-    public String getUslogin() {
-        return Uslogin;
+    public String getuslogin() {
+        return uslogin;
     }
 
     /**
-     * @param Uslogin the Uslogin to set
+     * @param uslogin the uslogin to set
      */
-    public void setUslogin(String Uslogin) {
-        this.Uslogin = Uslogin;
+    public void setuslogin(String uslogin) {
+        this.uslogin = uslogin;
     }
 
     /**
      * @return the Usenha
      */
-    public String getUssenha() {
-        return Ussenha;
+    public String getussenha() {
+        return ussenha;
     }
 
     /**
      * @param Usenha the Usenha to set
      */
-    public void setUssenha(String Ussenha) {
-        this.Ussenha = Ussenha;
+    public void setussenha(String ussenha) {
+        this.ussenha = ussenha;
     }
     
     

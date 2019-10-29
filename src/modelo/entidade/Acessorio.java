@@ -10,35 +10,35 @@ package modelo.entidade;
  * @author lucas
  */
 public class Acessorio {
-    private int Aceid;
-    private String Acedesc;
+    private int aceid;
+    private String acesdesc;
 
     /**
-     * @return the Aceid
+     * @return the aceid
      */
-    public int getAceid() {
-        return Aceid;
+    public int getaceid() {
+        return aceid;
     }
 
     /**
-     * @param Aceid the Aceid to set
+     * @param aceid the aceid to set
      */
-    public void setAceid(int Aceid) {
-        this.Aceid = Aceid;
+    public void setaceid(int aceid) {
+        this.aceid = aceid;
     }
 
     /**
-     * @return the Acedesc
+     * @return the acesdesc
      */
-    public String getAcedesc() {
-        return Acedesc;
+    public String getacesdesc() {
+        return acesdesc;
     }
 
     /**
-     * @param Acedesc the Acedesc to set
+     * @param acesdesc the acesdesc to set
      */
-    public void setAcedesc(String Acedesc) {
-        this.Acedesc = Acedesc;
+    public void setacesdesc(String acesdesc) {
+        this.acesdesc = acesdesc;
     }
     
     

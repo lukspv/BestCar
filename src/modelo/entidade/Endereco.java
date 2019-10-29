@@ -10,51 +10,51 @@ package modelo.entidade;
  * @author lucas
  */
 public class Endereco {
-    private String Encep;
-    private String Enrua;
-    private String Ennumero;
+    private String encep;
+    private String enrua;
+    private String ennumero;
     private Bairro bairro;
 
     /**
-     * @return the Encep
+     * @return the encep
      */
-    public String getEncep() {
-        return Encep;
+    public String getencep() {
+        return encep;
     }
 
     /**
-     * @param Encep the Encep to set
+     * @param encep the encep to set
      */
-    public void setEncep(String Encep) {
-        this.Encep = Encep;
+    public void setencep(String encep) {
+        this.encep = encep;
     }
 
     /**
-     * @return the Enrua
+     * @return the enrua
      */
-    public String getEnrua() {
-        return Enrua;
+    public String getenrua() {
+        return enrua;
     }
 
     /**
-     * @param Enrua the Enrua to set
+     * @param enrua the enrua to set
      */
-    public void setEnrua(String Enrua) {
-        this.Enrua = Enrua;
+    public void setenrua(String enrua) {
+        this.enrua = enrua;
     }
 
     /**
-     * @return the Ennumero
+     * @return the ennumero
      */
-    public String getEnnumero() {
-        return Ennumero;
+    public String getennumero() {
+        return ennumero;
     }
 
     /**
-     * @param Ennumero the Ennumero to set
+     * @param ennumero the ennumero to set
      */
-    public void setEnnumero(String Ennumero) {
-        this.Ennumero = Ennumero;
+    public void setennumero(String ennumero) {
+        this.ennumero = ennumero;
     }
 
     /**

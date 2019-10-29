@@ -10,22 +10,22 @@ package modelo.entidade;
  * @author lucas
  */
 public class Acecarro {
-    private int Acaid;
+    private int acaid;
     private Acessorio acessorio;
     private Carro carro;
 
     /**
-     * @return the Acaid
+     * @return the acaid
      */
-    public int getAcaid() {
-        return Acaid;
+    public int getacaid() {
+        return acaid;
     }
 
     /**
-     * @param Acaid the Acaid to set
+     * @param acaid the acaid to set
      */
-    public void setAcaid(int Acaid) {
-        this.Acaid = Acaid;
+    public void setacaid(int acaid) {
+        this.acaid = acaid;
     }
 
     /**

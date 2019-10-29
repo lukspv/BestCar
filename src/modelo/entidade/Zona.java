@@ -11,35 +11,35 @@ package modelo.entidade;
  */
 public class Zona {
     
-    private int Zoid;
-    private String Zonome;
+    private int zoid;
+    private String zonome;
 
     /**
-     * @return the Zoid
+     * @return the zoid
      */
-    public int getZoid() {
-        return Zoid;
+    public int getzoid() {
+        return zoid;
     }
 
     /**
-     * @param Zoid the Zoid to set
+     * @param zoid the zoid to set
      */
-    public void setZoid(int Zoid) {
-        this.Zoid = Zoid;
+    public void setzoid(int zoid) {
+        this.zoid = zoid;
     }
 
     /**
-     * @return the Zonome
+     * @return the zonome
      */
-    public String getZonome() {
-        return Zonome;
+    public String getzonome() {
+        return zonome;
     }
 
     /**
-     * @param Zonome the Zonome to set
+     * @param zonome the zonome to set
      */
-    public void setZonome(String Zonome) {
-        this.Zonome = Zonome;
+    public void setzonome(String zonome) {
+        this.zonome = zonome;
     }
     
     

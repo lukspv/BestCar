@@ -10,52 +10,52 @@ package modelo.entidade;
  * @author lucas
  */
 public class Carro {
-    private String Caplaca;
-    private String Caano;
-    private double Cavldiaria;
+    private String caplaca;
+    private String caano;
+    private double cavldiaria;
     private Acessorio acessorio;
     private Modelo modelo;
 
     /**
-     * @return the Caplaca
+     * @return the caplaca
      */
-    public String getCaplaca() {
-        return Caplaca;
+    public String getcaplaca() {
+        return caplaca;
     }
 
     /**
-     * @param Caplaca the Caplaca to set
+     * @param caplaca the caplaca to set
      */
-    public void setCaplaca(String Caplaca) {
-        this.Caplaca = Caplaca;
+    public void setcaplaca(String caplaca) {
+        this.caplaca = caplaca;
     }
 
     /**
-     * @return the Caano
+     * @return the caano
      */
-    public String getCaano() {
-        return Caano;
+    public String getcaano() {
+        return caano;
     }
 
     /**
-     * @param Caano the Caano to set
+     * @param caano the caano to set
      */
-    public void setCaano(String Caano) {
-        this.Caano = Caano;
+    public void setcaano(String caano) {
+        this.caano = caano;
     }
 
     /**
-     * @return the Cavldiaria
+     * @return the cavldiaria
      */
-    public double getCavldiaria() {
-        return Cavldiaria;
+    public double getcavldiaria() {
+        return cavldiaria;
     }
 
     /**
-     * @param Cavldiaria the Cavldiaria to set
+     * @param cavldiaria the cavldiaria to set
      */
-    public void setCavldiaria(double Cavldiaria) {
-        this.Cavldiaria = Cavldiaria;
+    public void setcavldiaria(double cavldiaria) {
+        this.cavldiaria = cavldiaria;
     }
 
     /**

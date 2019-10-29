@@ -10,66 +10,66 @@ package modelo.entidade;
  * @author lucas
  */
 public class Cliente {
-    private String Clicnh;
-    private String Clinome;
-    private String Clifone;
-    private String Clidtnasc;
+    private String clicnh;
+    private String clinome;
+    private String clifone;
+    private String clidtnasc;
     private Endereco endereco;
 
     /**
-     * @return the Clicnh
+     * @return the clicnh
      */
-    public String getClicnh() {
-        return Clicnh;
+    public String getclicnh() {
+        return clicnh;
     }
 
     /**
-     * @param Clicnh the Clicnh to set
+     * @param clicnh the clicnh to set
      */
-    public void setClicnh(String Clicnh) {
-        this.Clicnh = Clicnh;
+    public void setclicnh(String clicnh) {
+        this.clicnh = clicnh;
     }
 
     /**
-     * @return the Clinome
+     * @return the clinome
      */
-    public String getClinome() {
-        return Clinome;
+    public String getclinome() {
+        return clinome;
     }
 
     /**
-     * @param Clinome the Clinome to set
+     * @param clinome the clinome to set
      */
-    public void setClinome(String Clinome) {
-        this.Clinome = Clinome;
+    public void setclinome(String clinome) {
+        this.clinome = clinome;
     }
 
     /**
-     * @return the Clifone
+     * @return the clifone
      */
-    public String getClifone() {
-        return Clifone;
+    public String getclifone() {
+        return clifone;
     }
 
     /**
-     * @param Clifone the Clifone to set
+     * @param clifone the clifone to set
      */
-    public void setClifone(String Clifone) {
-        this.Clifone = Clifone;
+    public void setclifone(String clifone) {
+        this.clifone = clifone;
     }
 
     /**
-     * @return the Clidtnasc
+     * @return the clidtnasc
      */
-    public String getClidtnasc() {
-        return Clidtnasc;
+    public String getclidtnasc() {
+        return clidtnasc;
     }
 
     /**
-     * @param Clidtnasc the Clidtnasc to set
+     * @param clidtnasc the clidtnasc to set
      */
-    public void setClidtnasc(String Clidtnasc) {
-        this.Clidtnasc = Clidtnasc;
+    public void setclidtnasc(String clidtnasc) {
+        this.clidtnasc = clidtnasc;
     }
 
     /**

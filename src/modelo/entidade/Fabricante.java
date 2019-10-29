@@ -10,36 +10,44 @@ package modelo.entidade;
  * @author lucas
  */
 public class Fabricante {
-    private String Facnpj;
-    private String Fanome;
+    private String facnpj;
+    private String fanome;
 
     /**
-     * @return the Facnpj
+     * @return the facnpj
      */
-    public String getFacnpj() {
-        return Facnpj;
+    public String getfacnpj() {
+        return facnpj;
     }
 
     /**
-     * @param Facnpj the Facnpj to set
+     * @param facnpj the facnpj to set
      */
-    public void setFacnpj(String Facnpj) {
-        this.Facnpj = Facnpj;
+    public void setfacnpj(String facnpj) {
+        this.facnpj = facnpj;
     }
 
     /**
-     * @return the Fanome
+     * @return the fanome
      */
-    public String getFanome() {
-        return Fanome;
+    public String getfanome() {
+        return fanome;
     }
 
     /**
-     * @param Fanome the Fanome to set
+     * @param fanome the fanome to set
      */
-    public void setFanome(String Fanome) {
-        this.Fanome = Fanome;
+    public void setfanome(String fanome) {
+        this.fanome = fanome;
     }
+
+    @Override
+    public String toString() {
+        return fanome;
+    }
+    
+    
+    
     
     
 }

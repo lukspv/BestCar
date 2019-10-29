@@ -11,36 +11,36 @@ package modelo.entidade;
  */
 public class Bairro {
     
-    private int Baid;
-    private String Banome;
+    private int baid;
+    private String banome;
     private Zona zona;
 
     /**
-     * @return the Baid
+     * @return the baid
      */
-    public int getBaid() {
-        return Baid;
+    public int getbaid() {
+        return baid;
     }
 
     /**
-     * @param Baid the Baid to set
+     * @param baid the baid to set
      */
-    public void setBaid(int Baid) {
-        this.Baid = Baid;
+    public void setbaid(int baid) {
+        this.baid = baid;
     }
 
     /**
-     * @return the Banome
+     * @return the banome
      */
-    public String getBanome() {
-        return Banome;
+    public String getbanome() {
+        return banome;
     }
 
     /**
-     * @param Banome the Banome to set
+     * @param banome the banome to set
      */
-    public void setBanome(String Banome) {
-        this.Banome = Banome;
+    public void setbanome(String banome) {
+        this.banome = banome;
     }
 
     /**

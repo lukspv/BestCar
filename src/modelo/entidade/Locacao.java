@@ -10,98 +10,98 @@ package modelo.entidade;
  * @author lucas
  */
 public class Locacao {
-    private int Loid;
-    private double Lovldiaria;
-    private char Loestatus;
-    private int Loqtdias;
-    private String Lodtini;
-    private String Lodtfim;
+    private int loid;
+    private double lovldiaria;
+    private char loestatus;
+    private int loqtdias;
+    private String lodtini;
+    private String lodtfim;
     private Carro carro;
     private Cliente cliente;
     private Usuario usuario;
 
     /**
-     * @return the Loid
+     * @return the loid
      */
-    public int getLoid() {
-        return Loid;
+    public int getloid() {
+        return loid;
     }
 
     /**
-     * @param Loid the Loid to set
+     * @param loid the loid to set
      */
-    public void setLoid(int Loid) {
-        this.Loid = Loid;
+    public void setloid(int loid) {
+        this.loid = loid;
     }
 
     /**
-     * @return the Lovldiaria
+     * @return the lovldiaria
      */
-    public double getLovldiaria() {
-        return Lovldiaria;
+    public double getlovldiaria() {
+        return lovldiaria;
     }
 
     /**
-     * @param Lovldiaria the Lovldiaria to set
+     * @param lovldiaria the lovldiaria to set
      */
-    public void setLovldiaria(double Lovldiaria) {
-        this.Lovldiaria = Lovldiaria;
+    public void setlovldiaria(double lovldiaria) {
+        this.lovldiaria = lovldiaria;
     }
 
     /**
-     * @return the Loestatus
+     * @return the loestatus
      */
-    public char getLoestatus() {
-        return Loestatus;
+    public char getloestatus() {
+        return loestatus;
     }
 
     /**
-     * @param Loestatus the Loestatus to set
+     * @param loestatus the loestatus to set
      */
-    public void setLoestatus(char Loestatus) {
-        this.Loestatus = Loestatus;
+    public void setloestatus(char loestatus) {
+        this.loestatus = loestatus;
     }
 
     /**
-     * @return the Loqtdias
+     * @return the loqtdias
      */
-    public int getLoqtdias() {
-        return Loqtdias;
+    public int getloqtdias() {
+        return loqtdias;
     }
 
     /**
-     * @param Loqtdias the Loqtdias to set
+     * @param loqtdias the loqtdias to set
      */
-    public void setLoqtdias(int Loqtdias) {
-        this.Loqtdias = Loqtdias;
+    public void setloqtdias(int loqtdias) {
+        this.loqtdias = loqtdias;
     }
 
     /**
-     * @return the Lodtini
+     * @return the lodtini
      */
-    public String getLodtini() {
-        return Lodtini;
+    public String getlodtini() {
+        return lodtini;
     }
 
     /**
-     * @param Lodtini the Lodtini to set
+     * @param lodtini the lodtini to set
      */
-    public void setLodtini(String Lodtini) {
-        this.Lodtini = Lodtini;
+    public void setlodtini(String lodtini) {
+        this.lodtini = lodtini;
     }
 
     /**
-     * @return the Lodtfim
+     * @return the lodtfim
      */
-    public String getLodtfim() {
-        return Lodtfim;
+    public String getlodtfim() {
+        return lodtfim;
     }
 
     /**
-     * @param Lodtfim the Lodtfim to set
+     * @param lodtfim the lodtfim to set
      */
-    public void setLodtfim(String Lodtfim) {
-        this.Lodtfim = Lodtfim;
+    public void setlodtfim(String lodtfim) {
+        this.lodtfim = lodtfim;
     }
 
     /**
