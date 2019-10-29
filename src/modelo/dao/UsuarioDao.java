@@ -26,40 +26,40 @@ public class UsuarioDao {
     private Connection Conecta;
 
     //metodos
-    public void Cadastrar(Usuario usuario) throws SQLException {
+    public void cadastrar(Usuario usuario) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
         Comando = "insert into Usuario (Usnome,Uslogin,Ussenha) values (?,?,?);";
         ps = Conecta.prepareStatement(Comando);
 
-        ps.setString(1, usuario.getUsnome());
-        ps.setString(2, usuario.getUslogin());
-        ps.setString(3, usuario.getUssenha());
+        ps.setString(1, usuario.getusnome());
+        ps.setString(2, usuario.getuslogin());
+        ps.setString(3, usuario.getussenha());
         ps.execute();
 
         FabricaConexao.FecharConexao();
 
     }
 
-    public void Alterar(Usuario usuario) throws SQLException {
+    public void alterar(Usuario usuario) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
-        Comando = "update Usuario set Uslogin = ?, Usnome = ?, Ussenha = ? where Usid=?;";
+        Comando = "update Usuario set uslogin = ?, usnome = ?, ussenha = ? where usid=?;";
         ps = Conecta.prepareStatement(Comando);
-        ps.setString(1, usuario.getUslogin());
-        ps.setString(2, usuario.getUsnome());
-        ps.setString(3, usuario.getUssenha());
-        ps.setInt(4, usuario.getUsid());
+        ps.setString(1, usuario.getuslogin());
+        ps.setString(2, usuario.getusnome());
+        ps.setString(3, usuario.getussenha());
+        ps.setInt(4, usuario.getusid());
         ps.execute();
 
         FabricaConexao.FecharConexao();
 
     }
 
-    public void Excluir(int id) throws SQLException {
+    public void excluir(int id) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
-        Comando = "delete from Usuario where Usid=?;";
+        Comando = "delete from usuario where usid=?;";
         ps = Conecta.prepareStatement(Comando);
         ps.setInt(1, id);
         ps.execute();
@@ -67,7 +67,7 @@ public class UsuarioDao {
         FabricaConexao.FecharConexao();
     }
 
-    public List<Usuario> ListarTodos(String nome) throws SQLException {
+    public List<Usuario> listarTodos(String nome) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
         Comando = "select * from Usuario where UsLogin '" + nome + "%';";
@@ -76,25 +76,25 @@ public class UsuarioDao {
         //ps.setString(1,nome+"%"); 
         rs = ps.executeQuery();
 
-        List<Usuario> Lista = new ArrayList<>();
+        List<Usuario> lista = new ArrayList<>();
         while (rs.next()) {
             Usuario usuario = new Usuario();
 
-            ps.setString(1, usuario.getUslogin());
-            ps.setString(2, usuario.getUsnome());
-            ps.setString(3, usuario.getUssenha());
-            ps.setInt(4, usuario.getUsid());
+            ps.setString(1, usuario.getuslogin());
+            ps.setString(2, usuario.getusnome());
+            ps.setString(3, usuario.getussenha());
+            ps.setInt(4, usuario.getusid());
 
-            Lista.add(usuario);
+            lista.add(usuario);
 
         }
 
         FabricaConexao.FecharConexao();
-        return Lista;
+        return lista;
 
     }
 
-    public Usuario Buscar(int id) throws SQLException {
+    public Usuario buscar(int id) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
         Comando = "select * from Usuario where Usid =" + id + ";";
@@ -104,15 +104,15 @@ public class UsuarioDao {
         rs = ps.executeQuery();
 
         Usuario usuario = new Usuario();
-        //List<Zona> Lista = new ArrayList<>();
+        //List<Zona> lista = new ArrayList<>();
         while (rs.next()) {
 
-            usuario.setUsid(rs.getInt("Usid"));
-            usuario.setUsnome(rs.getString("Usnome"));
-            usuario.setUslogin(rs.getString("Uslogin"));
-            usuario.setUssenha(rs.getString("Ussenha"));
+            usuario.setusid(rs.getInt("Usid"));
+            usuario.setusnome(rs.getString("Usnome"));
+            usuario.setuslogin(rs.getString("Uslogin"));
+            usuario.setussenha(rs.getString("Ussenha"));
             
-            //   Lista.add(acessorio);
+            //   lista.add(acessorio);
         }
 
         FabricaConexao.FecharConexao();

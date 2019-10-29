@@ -30,14 +30,14 @@ public class ModeloDao {
     
     //metodos
     
-    public void Cadastrar(Modelo modelo) throws SQLException{
+    public void cadastrar(Modelo modelo) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
-        Comando="insert into modelo(Modesc,Mofacnpj) values (?,?)";
+        Comando="insert into Modelo(Modesc,Mofacnpj) values (?,?)";
         ps=Conecta.prepareStatement(Comando);
        
-        ps.setString(1,modelo.getModesc());
-        ps.setString(2,modelo.getFabricante().getFacnpj());
+        ps.setString(1,modelo.getmodesc());
+        ps.setString(2,modelo.getFabricante().getfacnpj());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -45,14 +45,14 @@ public class ModeloDao {
         
     }
     
-    public void Alterar(Modelo modelo) throws SQLException{
+    public void alterar(Modelo modelo) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
-        Comando="update modelo set Modesc = ?, Mofacnpj = ? where Moid= ?;";
+        Comando="update Modelo set Modesc = ?, Mofacnpj = ? where Moid= ?;";
         ps=Conecta.prepareStatement(Comando);
-        ps.setString(1, modelo.getModesc());
-        ps.setString(2, modelo.getFabricante().getFacnpj());
-        ps.setInt(3,modelo.getMoid());
+        ps.setString(1, modelo.getmodesc());
+        ps.setString(2, modelo.getFabricante().getfacnpj());
+        ps.setInt(3,modelo.getmoid());
         
         ps.execute();
         
@@ -63,7 +63,7 @@ public class ModeloDao {
         
     }
     
-        public void Excluir(int id) throws SQLException{
+        public void excluir(int id) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="delete from Modelo where Moid=?;";
@@ -75,43 +75,43 @@ public class ModeloDao {
         }
         
         
-        public List<Modelo> ListarTodos(String nome) throws SQLException{
+        public List<Modelo> listarTodos(String nome) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
-        Comando="select * from Modelo join Fabricante on Facnpj=Mofacnpj where Modesc ="+ nome +";";
+        Comando="select * from modelo join Fabricante on Facnpj=Mofacnpj where Modesc ="+ nome +";";
         //"select * from Zona where Zonome like ?"
         ps=Conecta.prepareStatement(Comando);
         //ps.setString(1,nome+"%"); 
         rs=ps.executeQuery();
         
    
-        List<Modelo> Lista = new ArrayList<>();
+        List<Modelo> lista = new ArrayList<>();
         while(rs.next()){
             Modelo modelo = new Modelo();
             
-            modelo.setMoid(rs.getInt("Moid"));
-            modelo.setModesc(rs.getString("Modesc"));
+            modelo.setmoid(rs.getInt("Moid"));
+            modelo.setmodesc(rs.getString("Modesc"));
             
             Fabricante fabricante = new Fabricante();
             
-            fabricante.setFacnpj(rs.getString("Facnpj"));
-            fabricante.setFanome(rs.getString("Fanome"));
+            fabricante.setfacnpj(rs.getString("facnpj"));
+            fabricante.setfanome(rs.getString("fanome"));
             
             modelo.setFabricante(fabricante);
             
             
-            Lista.add(modelo);
+            lista.add(modelo);
             
             
         }
         
         FabricaConexao.FecharConexao();
-        return Lista;
+        return lista;
 
             
         }
         
-        public Modelo Buscar(int id) throws SQLException{
+        public Modelo buscar(int id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
         Comando="select * from Modelo join Fabricante on Facnpj=Mofacnpj where Modesc ="+ id +";";
@@ -121,24 +121,24 @@ public class ModeloDao {
         rs=ps.executeQuery();
         
         Modelo modelo = new Modelo();
-        //List<Zona> Lista = new ArrayList<>();
+        //List<Zona> lista = new ArrayList<>();
         while(rs.next()){
             
             
             //Modelo modelo = new Modelo();
             
-            modelo.setMoid(rs.getInt("Moid"));
-            modelo.setModesc(rs.getString("Modesc"));
+            modelo.setmoid(rs.getInt("Moid"));
+            modelo.setmodesc(rs.getString("Modesc"));
             
             Fabricante fabricante = new Fabricante();
             
-            fabricante.setFacnpj(rs.getString("Facnpj"));
-            fabricante.setFanome(rs.getString("Fanome"));
+            fabricante.setfacnpj(rs.getString("Facnpj"));
+            fabricante.setfanome(rs.getString("Fanome"));
             
             modelo.setFabricante(fabricante);
             
             
-         //   Lista.add(acessorio);
+         //   lista.add(acessorio);
            
             
         }

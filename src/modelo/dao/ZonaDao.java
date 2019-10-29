@@ -29,13 +29,13 @@ public class ZonaDao {
     
     //metodos
     
-    public void Cadastrar(Zona zona) throws SQLException{
+    public void cadastrar(Zona zona) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="insert into Zona (Zonome) values (?);";
         ps=Conecta.prepareStatement(Comando);
        
-        ps.setString(1, zona.getZonome());
+        ps.setString(1, zona.getzonome());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -44,13 +44,13 @@ public class ZonaDao {
         
     }
     
-    public void Alterar(Zona zona) throws SQLException{
+    public void alterar(Zona zona) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="update Zona set Zonome = ? where Zoid=?;";
         ps=Conecta.prepareStatement(Comando);
-        ps.setString(1, zona.getZonome());
-        ps.setInt(2, zona.getZoid());
+        ps.setString(1, zona.getzonome());
+        ps.setInt(2, zona.getzoid());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -60,7 +60,7 @@ public class ZonaDao {
         
     }
     
-        public void Excluir(int id) throws SQLException{
+        public void excluir(int id) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="delete from Zona where Zoid=?;";
@@ -72,7 +72,7 @@ public class ZonaDao {
         }
         
         
-        public List<Zona> ListarTodos(String nome) throws SQLException{
+        public List<Zona> listarTodos(String nome) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
         Comando="select * from Zona where Zonome '"+nome+"%';";
@@ -82,25 +82,25 @@ public class ZonaDao {
         rs=ps.executeQuery();
         
    
-        List<Zona> Lista = new ArrayList<>();
+        List<Zona> lista = new ArrayList<>();
         while(rs.next()){
             Zona zona = new Zona();
             
-            zona.setZoid(rs.getInt("Zoid"));
-            zona.setZonome(rs.getString("Zonome"));
+            zona.setzoid(rs.getInt("Zoid"));
+            zona.setzonome(rs.getString("Zonome"));
             
-            Lista.add(zona);
+            lista.add(zona);
             
             
         }
         
         FabricaConexao.FecharConexao();
-        return Lista;
+        return lista;
 
             
         }
         
-        public Zona Buscar(int id) throws SQLException{
+        public Zona buscar(int id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
         Comando="select * from Zona where Zoid = "+ id +";";
@@ -110,14 +110,14 @@ public class ZonaDao {
         rs=ps.executeQuery();
         
         Zona zona = new Zona();
-        //List<Zona> Lista = new ArrayList<>();
+        //List<Zona> lista = new ArrayList<>();
         while(rs.next()){
             
             
-            zona.setZoid(rs.getInt("Zoid"));
-            zona.setZonome(rs.getString("Zonome"));
+            zona.setzoid(rs.getInt("Zoid"));
+            zona.setzonome(rs.getString("Zonome"));
             
-         //   Lista.add(zona);
+         //   lista.add(zona);
             
             
         }

@@ -30,13 +30,13 @@ public class AcessorioDao {
     
     //metodos
     
-    public void Cadastrar(Acessorio acessorio) throws SQLException{
+    public void cadastrar(Acessorio acessorio) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="insert into Acessorio (Acedesc) values (?);";
         ps=Conecta.prepareStatement(Comando);
        
-        ps.setString(1, acessorio.getAcedesc());
+        ps.setString(1, acessorio.getacesdesc());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -44,13 +44,13 @@ public class AcessorioDao {
         
     }
     
-    public void Alterar(Acessorio acessorio) throws SQLException{
+    public void alterar(Acessorio acessorio) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="update Acessorio set Acedesc = ? where Aceid=?;";
         ps=Conecta.prepareStatement(Comando);
-        ps.setString(1, acessorio.getAcedesc());
-        ps.setInt(2, acessorio.getAceid());
+        ps.setString(1, acessorio.getacesdesc());
+        ps.setInt(2, acessorio.getaceid());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -60,7 +60,7 @@ public class AcessorioDao {
         
     }
     
-        public void Excluir(int id) throws SQLException{
+        public void excluir(int id) throws SQLException{
         
         Conecta=FabricaConexao.Conectar();
         Comando="delete from Acessorio where Aceid=?;";
@@ -72,7 +72,7 @@ public class AcessorioDao {
         }
         
         
-        public List<Acessorio> ListarTodos(String nome) throws SQLException{
+        public List<Acessorio> listarTodos(String nome) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
         Comando="select * from Acessorio where Acedesc '"+nome+"%';";
@@ -82,25 +82,25 @@ public class AcessorioDao {
         rs=ps.executeQuery();
         
    
-        List<Acessorio> Lista = new ArrayList<>();
+        List<Acessorio> lista = new ArrayList<>();
         while(rs.next()){
             Acessorio acessorio = new Acessorio();
             
-            acessorio.setAceid(rs.getInt("Aceid"));
-            acessorio.setAcedesc(rs.getString("Acdesc"));
+            acessorio.setaceid(rs.getInt("Aceid"));
+            acessorio.setacesdesc(rs.getString("Acdesc"));
             
-            Lista.add(acessorio);
+            lista.add(acessorio);
             
             
         }
         
         FabricaConexao.FecharConexao();
-        return Lista;
+        return lista;
 
             
         }
         
-        public Acessorio Buscar(int id) throws SQLException{
+        public Acessorio buscar(int id) throws SQLException{
             
         Conecta=FabricaConexao.Conectar();
         Comando="select * from Acessorio where Aceid ="+id+";";
@@ -110,14 +110,14 @@ public class AcessorioDao {
         rs=ps.executeQuery();
         
         Acessorio acessorio = new Acessorio();
-        //List<Zona> Lista = new ArrayList<>();
+        //List<Zona> lista = new ArrayList<>();
         while(rs.next()){
             
             
-            acessorio.setAceid(rs.getInt("Aceid"));
-            acessorio.setAcedesc(rs.getString("Acedesc"));
+            acessorio.setaceid(rs.getInt("Aceid"));
+            acessorio.setacesdesc(rs.getString("Acedesc"));
             
-         //   Lista.add(acessorio);
+         //   lista.add(acessorio);
             
             
         }
