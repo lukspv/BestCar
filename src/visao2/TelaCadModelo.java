@@ -7,8 +7,6 @@ package visao2;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import modelo.dao.FabricanteDao;
 import modelo.dao.ModeloDao;
 import modelo.entidade.Fabricante;
@@ -56,8 +54,6 @@ public class TelaCadModelo extends javax.swing.JInternalFrame {
         jtxtdesc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel2.setText("Fabricante");
-
-        jcfabricante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha..." }));
 
         btsalvar.setBackground(new java.awt.Color(51, 153, 0));
         btsalvar.setText("Salvar");
@@ -123,23 +119,11 @@ public class TelaCadModelo extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btsalvarActionPerformed
-                
-        ModeloDao mdao = new ModeloDao();
-        Modelo mod = new Modelo();
-        mod.setmodesc(jtxtdesc.getText());
-        
-        Fabricante fab = (Fabricante) jcfabricante.getSelectedItem();
-        mod.setFabricante(fab);
 
-        
-        try {
-            mdao.cadastrar(mod);
-            
-            System.out.println("Salvo com Sucesso");
-        } catch (SQLException ex) {
-            System.out.println("Não salvou");;
-        }
+    private void btsalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btsalvarActionPerformed
+
+        salvarmodelo();
+
     }//GEN-LAST:event_btsalvarActionPerformed
 
 
@@ -148,25 +132,52 @@ public class TelaCadModelo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JComboBox<String> jcfabricante;
+    private javax.swing.JComboBox<Fabricante> jcfabricante;
     private javax.swing.JTextField jtxtdesc;
     // End of variables declaration//GEN-END:variables
 
-    public void preencherComboFabricante(){
+    private void salvarmodelo() {
+
+        ModeloDao mdao = new ModeloDao();
+        Modelo mod = new Modelo();
+
+        mod.setmodesc(jtxtdesc.getText());
+
+        //System.out.println("AQUI 1");
+
+        Fabricante fab = (Fabricante) jcfabricante.getSelectedItem();
+
+        //Fabricante fab = new Fabricante();
+        //fab = (Fabricante) jcfabricante.getSelectedItem();
+        //System.out.println("AQUI 2");
+
+        mod.setfabricante(fab);
+
+        try {
+            mdao.cadastrar(mod);
+
+            System.out.println("Salvo com Sucesso");
+        } catch (SQLException ex) {
+            System.out.println("Não salvou");;
+        }
+
+    }
+
+    public void preencherComboFabricante() {
         FabricanteDao fdao = new FabricanteDao();
         //Fabricante fab=new Fabricante();
 
         try {
             List<Fabricante> lista = fdao.listarTodos();
-            
-            for(Fabricante fab : lista){
-                jcfabricante.addItem(fab.getfanome());
+
+            for (Fabricante fab : lista) {
+                jcfabricante.addItem(fab);
             }
         } catch (SQLException ex) {
+
             System.out.println("Erro ao recuperar");
         }
-                
-        
+
     }
 
 }

@@ -54,7 +54,7 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        btCliente.setText("Cliente");
+        btCliente.setText("Modelo");
         btCliente.setToolTipText("Cliente");
         btCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btCliente.setFocusable(false);
