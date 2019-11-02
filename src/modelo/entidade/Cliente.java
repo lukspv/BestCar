@@ -75,14 +75,14 @@ public class Cliente {
     /**
      * @return the endereco
      */
-    public Endereco getEndereco() {
+    public Endereco getendereco() {
         return endereco;
     }
 
     /**
      * @param endereco the endereco to set
      */
-    public void setEndereco(Endereco endereco) {
+    public void setendereco(Endereco endereco) {
         this.endereco = endereco;
     }
     

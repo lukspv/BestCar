@@ -107,42 +107,42 @@ public class Locacao {
     /**
      * @return the carro
      */
-    public Carro getCarro() {
+    public Carro getcarro() {
         return carro;
     }
 
     /**
      * @param carro the carro to set
      */
-    public void setCarro(Carro carro) {
+    public void setcarro(Carro carro) {
         this.carro = carro;
     }
 
     /**
      * @return the cliente
      */
-    public Cliente getCliente() {
+    public Cliente getcliente() {
         return cliente;
     }
 
     /**
      * @param cliente the cliente to set
      */
-    public void setCliente(Cliente cliente) {
+    public void setcliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
     /**
      * @return the usuario
      */
-    public Usuario getUsuario() {
+    public Usuario getusuario() {
         return usuario;
     }
 
     /**
      * @param usuario the usuario to set
      */
-    public void setUsuario(Usuario usuario) {
+    public void setusuario(Usuario usuario) {
         this.usuario = usuario;
     }
     

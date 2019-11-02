@@ -45,14 +45,14 @@ public class Modelo {
     /**
      * @return the fabricante
      */
-    public Fabricante getFabricante() {
+    public Fabricante getfabricante() {
         return fabricante;
     }
 
     /**
      * @param fabricante the fabricante to set
      */
-    public void setFabricante(Fabricante fabricante) {
+    public void setfabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
     }
     

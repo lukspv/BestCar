@@ -60,14 +60,14 @@ public class Endereco {
     /**
      * @return the bairro
      */
-    public Bairro getBairro() {
+    public Bairro getbairro() {
         return bairro;
     }
 
     /**
      * @param bairro the bairro to set
      */
-    public void setBairro(Bairro bairro) {
+    public void setbairro(Bairro bairro) {
         this.bairro = bairro;
     }
     

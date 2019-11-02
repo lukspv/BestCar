@@ -31,28 +31,28 @@ public class Acecarro {
     /**
      * @return the acessorio
      */
-    public Acessorio getAcessorio() {
+    public Acessorio getacessorio() {
         return acessorio;
     }
 
     /**
      * @param acessorio the acessorio to set
      */
-    public void setAcessorio(Acessorio acessorio) {
+    public void setacessorio(Acessorio acessorio) {
         this.acessorio = acessorio;
     }
 
     /**
      * @return the carro
      */
-    public Carro getCarro() {
+    public Carro getcarro() {
         return carro;
     }
 
     /**
      * @param carro the carro to set
      */
-    public void setCarro(Carro carro) {
+    public void setcarro(Carro carro) {
         this.carro = carro;
     }
     

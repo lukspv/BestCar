@@ -46,14 +46,14 @@ public class Bairro {
     /**
      * @return the zona
      */
-    public Zona getZona() {
+    public Zona getzona() {
         return zona;
     }
 
     /**
      * @param zona the zona to set
      */
-    public void setZona(Zona zona) {
+    public void setzona(Zona zona) {
         this.zona = zona;
     }
     

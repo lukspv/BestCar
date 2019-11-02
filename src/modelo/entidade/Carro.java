@@ -61,28 +61,28 @@ public class Carro {
     /**
      * @return the acessorio
      */
-    public Acessorio getAcessorio() {
+    public Acessorio getacessorio() {
         return acessorio;
     }
 
     /**
      * @param acessorio the acessorio to set
      */
-    public void setAcessorio(Acessorio acessorio) {
+    public void setacessorio(Acessorio acessorio) {
         this.acessorio = acessorio;
     }
 
     /**
      * @return the modelo
      */
-    public Modelo getModelo() {
+    public Modelo getmodelo() {
         return modelo;
     }
 
     /**
      * @param modelo the modelo to set
      */
-    public void setModelo(Modelo modelo) {
+    public void setmodelo(Modelo modelo) {
         this.modelo = modelo;
     }
     
