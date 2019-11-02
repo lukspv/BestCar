@@ -37,7 +37,7 @@ public class ModeloDao {
         ps=Conecta.prepareStatement(Comando);
        
         ps.setString(1,modelo.getmodesc());
-        ps.setString(2,modelo.getFabricante().getfacnpj());
+        ps.setString(2,modelo.getfabricante().getfacnpj());
         ps.execute();
         
         FabricaConexao.FecharConexao();
@@ -51,7 +51,7 @@ public class ModeloDao {
         Comando="update Modelo set Modesc = ?, Mofacnpj = ? where Moid= ?;";
         ps=Conecta.prepareStatement(Comando);
         ps.setString(1, modelo.getmodesc());
-        ps.setString(2, modelo.getFabricante().getfacnpj());
+        ps.setString(2, modelo.getfabricante().getfacnpj());
         ps.setInt(3,modelo.getmoid());
         
         ps.execute();
@@ -97,7 +97,7 @@ public class ModeloDao {
             fabricante.setfacnpj(rs.getString("facnpj"));
             fabricante.setfanome(rs.getString("fanome"));
             
-            modelo.setFabricante(fabricante);
+            modelo.setfabricante(fabricante);
             
             
             lista.add(modelo);
@@ -135,7 +135,7 @@ public class ModeloDao {
             fabricante.setfacnpj(rs.getString("Facnpj"));
             fabricante.setfanome(rs.getString("Fanome"));
             
-            modelo.setFabricante(fabricante);
+            modelo.setfabricante(fabricante);
             
             
          //   lista.add(acessorio);
