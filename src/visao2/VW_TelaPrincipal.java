@@ -29,7 +29,8 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        btCliente = new javax.swing.JButton();
+        btModelo = new javax.swing.JButton();
+        btListModelo = new javax.swing.JButton();
         JDPAreaTrabalho = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -54,18 +55,29 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        btCliente.setText("Modelo");
-        btCliente.setToolTipText("Cliente");
-        btCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btCliente.setFocusable(false);
-        btCliente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btCliente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btCliente.addActionListener(new java.awt.event.ActionListener() {
+        btModelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/cliente2.png"))); // NOI18N
+        btModelo.setToolTipText("Cliente");
+        btModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btModelo.setFocusable(false);
+        btModelo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btModelo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btClienteActionPerformed(evt);
+                btModeloActionPerformed(evt);
             }
         });
-        jToolBar1.add(btCliente);
+        jToolBar1.add(btModelo);
+
+        btListModelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/modelo2.png"))); // NOI18N
+        btListModelo.setFocusable(false);
+        btListModelo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btListModelo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btListModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListModeloActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(btListModelo);
 
         JDPAreaTrabalho.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -156,19 +168,22 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClienteActionPerformed
-        
+    private void btModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btModeloActionPerformed
+
         TelaCadModelo tcm = new TelaCadModelo();
         JDPAreaTrabalho.add(tcm);
         tcm.setVisible(true);
 
 
+    }//GEN-LAST:event_btModeloActionPerformed
 
-
-
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_btClienteActionPerformed
+    private void btListModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListModeloActionPerformed
+        
+        TelaListModelo tcm = new TelaListModelo();
+        JDPAreaTrabalho.add(tcm);
+        tcm.setVisible(true);
+        
+    }//GEN-LAST:event_btListModeloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,7 +222,8 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane JDPAreaTrabalho;
-    private javax.swing.JButton btCliente;
+    private javax.swing.JButton btListModelo;
+    private javax.swing.JButton btModelo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
