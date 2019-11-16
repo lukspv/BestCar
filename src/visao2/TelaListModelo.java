@@ -59,6 +59,7 @@ public class TelaListModelo extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Listar Modelo");
 
         jLabel2.setText("Codigo");
 

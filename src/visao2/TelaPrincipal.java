@@ -5,19 +5,30 @@
  */
 package visao2;
 
+import javax.swing.JOptionPane;
+import modelo.entidade.Usuario;
+
 /**
  *
  * @author lucas
  */
-public class VW_TelaPrincipal extends javax.swing.JFrame {
+public class TelaPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form VW_TelaPrincipal
      */
-    public VW_TelaPrincipal() {
+    public TelaPrincipal() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        
     }
+    
+        public TelaPrincipal(Usuario us) {
+            initComponents();
+            jTnome.setText(us.getusnome());
+        
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +42,10 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
         jToolBar1 = new javax.swing.JToolBar();
         btModelo = new javax.swing.JButton();
         btListModelo = new javax.swing.JButton();
+        btLocacao = new javax.swing.JButton();
         JDPAreaTrabalho = new javax.swing.JDesktopPane();
+        jLabel2 = new javax.swing.JLabel();
+        jTnome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -50,7 +64,6 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BestCar 2.0");
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         setResizable(false);
 
         jToolBar1.setRollover(true);
@@ -79,17 +92,46 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
         });
         jToolBar1.add(btListModelo);
 
+        btLocacao.setText("Locacao");
+        btLocacao.setFocusable(false);
+        btLocacao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btLocacao.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btLocacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLocacaoActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(btLocacao);
+
         JDPAreaTrabalho.setBackground(new java.awt.Color(204, 204, 255));
+
+        jLabel2.setText("Usuario Logado:");
+
+        jTnome.setEnabled(false);
+        jTnome.setFocusable(false);
+
+        JDPAreaTrabalho.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        JDPAreaTrabalho.setLayer(jTnome, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout JDPAreaTrabalhoLayout = new javax.swing.GroupLayout(JDPAreaTrabalho);
         JDPAreaTrabalho.setLayout(JDPAreaTrabalhoLayout);
         JDPAreaTrabalhoLayout.setHorizontalGroup(
             JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(JDPAreaTrabalhoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JDPAreaTrabalhoLayout.setVerticalGroup(
             JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 847, Short.MAX_VALUE)
+            .addGroup(JDPAreaTrabalhoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(758, Short.MAX_VALUE))
         );
 
         jLabel1.setText("Todos os direitos reservados: Lucas Pimentel Vieira");
@@ -150,7 +192,7 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
             .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(JDPAreaTrabalho, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(856, Short.MAX_VALUE)
+                .addContainerGap(190, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(768, 768, 768))
         );
@@ -162,7 +204,7 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(JDPAreaTrabalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jLabel1)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -185,6 +227,12 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btListModeloActionPerformed
 
+    private void btLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLocacaoActionPerformed
+        TelaLocacao lc = new TelaLocacao();
+        JDPAreaTrabalho.add(lc);
+        lc.setVisible(true);
+    }//GEN-LAST:event_btLocacaoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -202,20 +250,21 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VW_TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VW_TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VW_TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VW_TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VW_TelaPrincipal().setVisible(true);
+                new TelaPrincipal().setVisible(true);
             }
         });
     }
@@ -223,8 +272,10 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane JDPAreaTrabalho;
     private javax.swing.JButton btListModelo;
+    private javax.swing.JButton btLocacao;
     private javax.swing.JButton btModelo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -239,6 +290,7 @@ public class VW_TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JTextField jTnome;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 }
