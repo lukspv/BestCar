@@ -94,28 +94,30 @@ public class UsuarioDao {
 
     }
 
-    public Usuario buscar(int id) throws SQLException {
+    public Usuario buscar(Usuario usu) throws SQLException {
 
         Conecta = FabricaConexao.Conectar();
-        Comando = "select * from Usuario where Usid =" + id + ";";
-        //"select * from Zona where Zonome like ?"
+        Comando = "select * from usuario where uslogin = ? and Ussenha = ?;";
         ps = Conecta.prepareStatement(Comando);
-        //ps.setString(1,nome+"%"); 
+        ps.setString(1, usu.getuslogin());
+        ps.setString(2, usu.getussenha());
         rs = ps.executeQuery();
-
-        Usuario usuario = new Usuario();
-        //List<Zona> lista = new ArrayList<>();
-        while (rs.next()) {
-
+        
+        Usuario usuario = null;
+        if (rs.next()) {
+            
+            usuario = new Usuario();
             usuario.setusid(rs.getInt("Usid"));
             usuario.setusnome(rs.getString("Usnome"));
             usuario.setuslogin(rs.getString("Uslogin"));
             usuario.setussenha(rs.getString("Ussenha"));
             
-            //   lista.add(acessorio);
+            System.out.println("Usuario Dao:"+ usuario.getusnome());
+
         }
 
         FabricaConexao.FecharConexao();
+        System.out.println("Usuario Dao:"+ usuario.getusnome());
         return usuario;
 
     }
