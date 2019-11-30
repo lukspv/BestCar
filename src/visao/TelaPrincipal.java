@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package visao2;
+package visao;
 
 import javax.swing.JOptionPane;
 import modelo.entidade.Usuario;
@@ -20,15 +20,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        
-    }
-    
-        public TelaPrincipal(Usuario us) {
-            initComponents();
-            jTnome.setText(us.getusnome());
-        
+
     }
 
+    public TelaPrincipal(Usuario us) {
+        initComponents();
+        jTnome.setText(us.getusnome());
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,9 +42,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btModelo = new javax.swing.JButton();
         btListModelo = new javax.swing.JButton();
         btLocacao = new javax.swing.JButton();
+        jBcliente = new javax.swing.JButton();
         JDPAreaTrabalho = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
-        jTnome = new javax.swing.JTextField();
+        jTnome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -60,6 +60,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,12 +108,26 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jToolBar1.add(btLocacao);
 
+        jBcliente.setText("Cliente");
+        jBcliente.setFocusable(false);
+        jBcliente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jBcliente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jBcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBclienteActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jBcliente);
+
         JDPAreaTrabalho.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel2.setText("Usuario Logado:");
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Usuario:");
 
-        jTnome.setEnabled(false);
-        jTnome.setFocusable(false);
+        jTnome.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTnome.setForeground(new java.awt.Color(255, 255, 255));
+        jTnome.setText("***");
 
         JDPAreaTrabalho.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         JDPAreaTrabalho.setLayer(jTnome, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -119,51 +138,60 @@ public class TelaPrincipal extends javax.swing.JFrame {
             JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JDPAreaTrabalhoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JDPAreaTrabalhoLayout.setVerticalGroup(
             JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JDPAreaTrabalhoLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(758, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(JDPAreaTrabalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTnome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(815, Short.MAX_VALUE))
         );
 
         jLabel1.setText("Todos os direitos reservados: Lucas Pimentel Vieira");
 
         jMenu1.setMnemonic('C');
         jMenu1.setText("Cadastro");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem1.setText("Acessorio");
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem2.setText("Fabricante");
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem3.setText("Usuario");
         jMenu1.add(jMenuItem3);
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem6.setText("Modelo");
         jMenu1.add(jMenuItem6);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem5.setText("Cliente");
         jMenu1.add(jMenuItem5);
 
         jMenu7.setText("Pagamento");
+        jMenu7.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
 
+        jMenuItem7.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem7.setText("Dinheiro");
         jMenu7.add(jMenuItem7);
 
+        jMenuItem8.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jMenuItem8.setText("Cartão");
         jMenu7.add(jMenuItem8);
 
@@ -172,15 +200,46 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Consulta");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Serviços");
+        jMenu3.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setMnemonic('R');
         jMenu4.setText("Relatorio");
+        jMenu4.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem4.setText("Acessorio");
+        jMenu4.add(jMenuItem4);
+
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem9.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem9.setText("Fabricante");
+        jMenu4.add(jMenuItem9);
+
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem10.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem10.setText("Usuario");
+        jMenu4.add(jMenuItem10);
+
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem11.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem11.setText("Modelo");
+        jMenu4.add(jMenuItem11);
+
+        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem12.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem12.setText("Cliente");
+        jMenu4.add(jMenuItem12);
+
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Ajuda");
+        jMenu5.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -189,18 +248,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(JDPAreaTrabalho, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(190, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(768, 768, 768))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JDPAreaTrabalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jLabel1)
@@ -208,6 +271,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btModeloActionPerformed
@@ -220,11 +284,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btModeloActionPerformed
 
     private void btListModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListModeloActionPerformed
-        
+
         TelaListModelo tcm = new TelaListModelo();
         JDPAreaTrabalho.add(tcm);
         tcm.setVisible(true);
-        
+
     }//GEN-LAST:event_btListModeloActionPerformed
 
     private void btLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLocacaoActionPerformed
@@ -232,6 +296,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         JDPAreaTrabalho.add(lc);
         lc.setVisible(true);
     }//GEN-LAST:event_btLocacaoActionPerformed
+
+    private void jBclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBclienteActionPerformed
+        TelaCadCliente lc = new TelaCadCliente();
+        JDPAreaTrabalho.add(lc);
+        lc.setVisible(true);
+    }//GEN-LAST:event_jBclienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,6 +344,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btListModelo;
     private javax.swing.JButton btLocacao;
     private javax.swing.JButton btModelo;
+    private javax.swing.JButton jBcliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -284,13 +355,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JTextField jTnome;
+    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JLabel jTnome;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 }

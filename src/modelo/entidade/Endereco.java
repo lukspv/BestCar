@@ -70,7 +70,6 @@ public class Endereco {
     public void setbairro(Bairro bairro) {
         this.bairro = bairro;
     }
-    
-    
-    
+
+
 }
